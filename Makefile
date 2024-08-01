@@ -14,7 +14,7 @@ BINARY_NAME = myapp
 # Build targets
 all: clean build
 build:
-	$(GOBUILD) -o $(BINARY_NAME) $(MAIN_PACKAGE)
+	$(GOBUILD) -o build/$(BINARY_NAME) $(MAIN_PACKAGE)
 clean:
 	$(GOCLEAN)
 	rm -f $(BINARY_NAME)
