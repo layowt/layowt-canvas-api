@@ -10,4 +10,4 @@ clean:
 	rm -f build/myapp
 
 run: build
-	./myapp
+	./build/myapp
