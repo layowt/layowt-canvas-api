@@ -3,6 +3,9 @@ FROM golang:1.22-alpine
 # Install make and other build essentials
 RUN apk add --no-cache make
 
+# Install air for live reloading
+RUN go install github.com/air-verse/air@latest
+
 # Set the working directory
 WORKDIR /app
 
@@ -23,4 +26,4 @@ RUN make build
 EXPOSE 8080
 
 # Run the application
-CMD [ "./build/myapp" ]
+CMD [ "air", "-c", ".air.toml" ]
