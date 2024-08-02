@@ -11,3 +11,6 @@ clean:
 
 run: build
 	./build/myapp
+
+download:
+	go mod download
