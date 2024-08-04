@@ -2,7 +2,7 @@
 
 # Run
 
-docker build -t [image-name]
+docker build -t [image-name] .
 
 # Then
 
