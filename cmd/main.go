@@ -19,5 +19,8 @@ func main() {
 		Uid: 1,
 	}
 
+	admin := types.Admin.DeleteUser(nil)
+
 	fmt.Println(user)
+	fmt.Println(admin)
 }
