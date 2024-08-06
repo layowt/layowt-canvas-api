@@ -1,9 +1,4 @@
-## Dockerfile
+## docker-compose
 
-# Run
-
-docker build -t [image-name] .
-
-# Then
-
-docker run -p 8080:8080 --rm -v $(pwd):/app -v /app/tmp --name layowt-canvas-api-air [image-name]
+Run `docker-compose up --build`
+This may return a permissions denied error. If this is the case, run `sudo docker-compose up --build`
