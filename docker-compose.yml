@@ -1,0 +1,19 @@
+# This specifies the version of the Docker Compose file format being used.
+version: '3.8'
+
+# define the different services that make up the application
+services:
+  app:
+    build:
+      context: .
+      # use the Dockerfile in the current directory
+      dockerfile: Dockerfile
+    # map the port that the app runs on to the outside world
+    ports:
+      - '8080:8080'
+    # map the app directory in the container to the host working directory
+    volumes:
+      - .:/app
+    # set the environment variables
+    environment:
+      - GO_ENV=development
