@@ -7,12 +7,13 @@ import (
 	"github.com/layowt/layowt-canvas-api/types"
 )
 
-func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello, World!")
+func helloWorldHandler(w http.ResponseWriter, r *http.Request) {
+	w.Write([]byte("Hello, World!"))
 }
 
 func main() {
-	http.HandleFunc("/", handler)
+	// map the '/hello-world' route to the helloWorldHandler function
+	http.HandleFunc("/hello-world", helloWorldHandler)
 	http.ListenAndServe(":8080", nil)
 
 	user := types.User{
