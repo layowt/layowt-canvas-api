@@ -1,4 +1,4 @@
-.PHONY: build test clean run
+.PHONY: build test clean run download
 
 build:
 	go build -o build/myapp ./cmd/main.go
