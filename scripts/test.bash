@@ -1,3 +1,3 @@
 #!/bin/bash
 
-curl localhost:8080/hello-world
+curl localhost:8080/
